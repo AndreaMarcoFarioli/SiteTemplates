@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="slideshow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="icon.png" rel="icon" type="image/png">
+
+</head>
+
+<body>
+    <div class="slideshow">
+    <a class="back"><i class="fas fa-arrow-left"> </i></a>
+        <div class="butt left">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <div class="butt right">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="header">
+            2/3
+        </div>
+        <div class="footer">
+            Coap
+        </div>
+        <div class="content-sd" max="11">
+            <img  description="3D Modelling" c="1" style="" class="act" src="image/Slider/3DModelling.png">
+            <img  description="Blender 2.8" c="2" style="" src="image/Slider/Blender.jpg">
+            <img  description="Enviroment" c="3" style="" src="image/Slider/Enviroment.jpg">
+            <img description="Character Design" c="4" style="" src="image/Slider/CharacterDesign.jpg">			
+			<img description="Low Poly" c="5" style="" src="image/Slider/Blender.jpg">
+			<img description="Planet Alpha" c="6" style="" src="image/Slider/Planet%20Alpha.jpg">
+			<img description="Platform 2D" c="7" style="" src="image/Slider/platform.jpg">
+			<img description="Modello riggato" c="8" style="" src="image/Slider/Rigging.jpg">
+			<img description="Environment non texturizzato" c="9" style="" src="image/Slider/untexture.jpg">
+			<img description="Unreal Engine" c="10" style="" src="image/Slider/UDK.jpg">
+            <img description="Light & Shadow" c="11" style="" src="image/Slider/light.jpg">
+        </div>
+    </div>
+    <script>
+        
+        $(".back").click(function(){
+             window.history.back();
+        });
+        
+        var dimension_image;
+        var __cnt = 0,
+            actual_opened = $("[c=1]");
+        var bool_nat = true;
+
+        $(".slideshow .header").html(__cnt + 1 + "/" + $(".content-sd").attr("max"));
+        $(".slideshow .footer").html(actual_opened.attr("description"));
+
+        $(document).ready(function() {
+            repic();
+        });
+        
+        $(window).resize(function(){repic()});
+
+
+        function repic() {
+            dimension_image = {
+                height: $("img.act").height(),
+                width: $("img.act").width()
+            };
+
+            $("img.act").attr("style", "--height-align:" + dimension_image.height + "px");
+        }
+
+
+        $(".butt").click(function() {
+            var right = $(this).hasClass("right"),
+                left = $(this).hasClass("left");
+            console.log(__cnt);
+            if (right && bool_nat) {
+                __cnt = __cnt + 1;
+                __cnt %= parseInt($(".content-sd").attr("max"));
+            } else if (left && bool_nat) {
+                __cnt = (__cnt > 0) ? __cnt - 1 : $(".content-sd").attr("max") - 1;
+            }
+            change_slide();
+        });
+
+
+        function change_slide() {
+            if (bool_nat) {
+                bool_nat = false;
+                $(".header").html(__cnt + 1 + "/" + $(".content-sd").attr("max"));
+                actual_opened.removeClass("act");
+                actual_opened = $("[c=" + (__cnt + 1) + "]");
+                actual_opened.addClass("act");
+                $(".footer").html(actual_opened.attr("description"));
+                repic();
+                console.log(__cnt);
+                setTimeout(function() {
+                    bool_nat = true;
+                    repic();
+                }, 250);
+            }
+        }
+    </script>
+</body>
+
+</html>

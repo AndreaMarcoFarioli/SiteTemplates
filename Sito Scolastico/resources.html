@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Resources</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="icon.png" rel="icon" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="Prism/prism.css" rel="stylesheet" type="text/css">
+    <script src="Prism/prism.js" type="text/javascript"></script>
+
+    <style>
+        body
+        {
+            --color : 201, 30, 30;
+            --color-scrollbar-active: 9, 24, 49;
+            --color-scrollbar-hover: 29, 59, 106;
+            --color-box:#333;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="open_page">
+    </div>
+    <div class="mobile_menu">
+        <div class="mobile_menu_button"><i class="fas fa-bars"></i></div>
+    </div>
+    <ul class="menu">
+        <a href="index.html">
+            <li class="">Home</li>
+        </a>
+        <a href="tecniche.html">
+            <li class="scure">Tecniche</li>
+        </a>
+        <a href="resources.html">
+            <li class="red active">Resources</li>
+        </a>
+        <a href="slider.html">
+            <li class="orange">Slider</li>
+        </a>
+    </ul>
+    <div style="background: url(image/bg3.jpg); --text: 'References'" class="content_preview _horiz"></div>
+    <h1 align="center">Risorse</h1>
+    <div class="content">
+        <div class="_box video_zoom" src="https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR53Jce9hP7G5xC4O9AgnOuL">
+            <div style="background: url(image/brackeys.jpg); 100; --text: 'Unity'" class="content_preview _vert"></div>
+
+            <div class="button">
+                <p>Visualizza la risorsa</p>
+            </div>
+        </div>
+        <div class="_box video_zoom" src="https://www.youtube.com/embed/videoseries?list=PLjEaoINr3zgHs8uzT3yqe4iHGfkCmMJ0P">
+            <div style="background: url(image/blender.jpg); --text: 'Blender'" class="content_preview _horiz"></div>
+
+            <div class="button">
+                <p>Visualizza i video</p>
+            </div>
+
+        </div>
+        <div class="_box video_zoom" src="Image/PBR%20TEORIA.pdf">
+            <div style="background: url(image/shader.jpg); --text: 'Shader/Material'" class="content_preview _horiz"></div>
+            <div class="button">
+                <p>Visualizza i video</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="toggle" call="night_mode" call-act="night_mode" params="">
+            <p>Nigth mode</p>
+        </div>
+    </div>
+    <div class="obscure">
+    </div>
+    <img class="image_vision close_img" />
+    <iframe class="video_vision _vert" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <i style="display: none" class="fas fa-times video_zoom_out close-cross"></i>
+
+    <script src="main_script.js" type="text/javascript"></script>
+</body>
+
+</html>

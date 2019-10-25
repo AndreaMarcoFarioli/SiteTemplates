@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Game Making</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="icon.png" rel="icon" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="Prism/prism.css" rel="stylesheet" type="text/css">
+    <script src="Prism/prism.js" type="text/javascript"></script>
+
+
+    <style>
+        body
+        {
+            --color : 59, 120, 219;
+            --color-scrollbar-active: 9, 24, 49;
+            --color-scrollbar-hover: 29, 59, 106;
+            --color-box:#333;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="open_page">
+    </div>
+    <div class="mobile_menu">
+        <div class="mobile_menu_button"><i class="fas fa-bars"></i></div>
+    </div>
+    <ul class="menu">
+        <a href="index.html">
+            <li class="active">Home</li>
+        </a>
+        <a href="tecniche.html">
+            <li class="scure">Tecniche</li>
+        </a>
+        <a href="resources.html">
+            <li class="red">Resources</li>
+        </a>
+        <a href="slider.html">
+            <li class="orange">Slider</li>
+        </a>
+    </ul>
+    <div style="background: url(image/vision_2.jpg); --text: 'Pagina Principale'" class="content_preview"></div>
+    <h1 align="center">In evidenza</h1>
+    <div class="content">
+          <div class="_box box_zoom" src="image/Map.png">
+            <div style="background: url(image/Map.png); 100; --text: 'Contenuti'"  class="content_preview"></div>
+            <div class="_content scrollable_div">
+                <b>PER TENERE TRACCIA</b>
+                <br>
+                <br>
+                <b>Scripting - </b>In questo sito affronteremo alcuni ostacoli e alcune tecniche adottate durante la programmazione di un gioco.
+                <br>
+                <br>
+                <b>Environment - </b>L'ambiente di una scena di gioco e' molto importante, noi vorremo esporre qualche breve esempio sulle luci, material e shader.
+                <br>
+                <br>
+                <b>Non solo NERD - </b>Per lo sviluppo di un gioco non esiste soltanto la parte <i>NERD</i> ma esiste anche una gestione e schematizzazione molto approfondita per lavorare a pieno delle proprie capacita'.
+                <br>
+                <br>
+                <b>Non esisti solo tu -</b>Un gioco e' divertente se giocato non solo da te, ma con qualche tuo amico. In questo sito affronteremo piccoli principi di Networking e spiegheremo come funziona (in linea di massima) un <b>Authoritarian Server</b>.
+                <br>
+                <br>
+                <b>Buona lettura</b>
+            </div>
+            <div class="button">
+                <p>Visualizza mappa</p>
+            </div>
+        </div>
+        <div class="_box open_vision" destination="1">
+            <div style="background: url(image/big_margin.PNG); --text: 'Perlin noise'" class="content_preview _horiz"></div>
+            <div class="_content scrollable_div">
+                <b>NON HAI IDEE SULLA MAPPA?</b>
+                <br>
+                <br>
+                Con la funzione perlin noise, potrai estrapolare (tramite due valori) una immagine procedurale in scala di grigi. Analizzando Pixel per pixel l'immagine puoi esportare il valore ottenuto su piano tridimensionale. Sommando all'immagino delle Ottave (ovvero il livello di definizione) e' possibile generare rilievi piu' definiti.
+            </div>
+            <div class="button">
+                <p>Vai all'articolo</p>
+				
+            </div>
+
+        </div>
+		
+        
+
+    </div>
+	<div class="panel_vision">
+        <div class="_header" style="display: none">
+            <i class="fas fa-times close_content_vision"></i>
+        </div>
+	<div content="1" style="display: none;" class="_document">
+            <div class="content_preview _horiz" style="background: url(image/big_margin.png); --text: 'Perlin Noise'">
+
+            </div>
+            <div class="content_vision">
+				<b><span class="first-letter">S</span>toria</b>
+				<br>
+				Perlin noise è un tipo di Gradient Noise sviluppato da Ken Perlin nel 1973, 
+				derivato dalla sua frustrazione verso il look delle "computer graphics" del tempo.
+				Descrisse formalmente la sua scoperta nella conferenza di SIGGRAPH nel 1985 
+				chiamandola "An Image Synthesizer".
+				Nel 1997, Perlin è stato premiato con un Academy Award For Techical Achievement
+				per aver creato l'algoritmo:
+				<br>
+				<br>
+				To Ken Perlin for the development of Perlin Noise, a technique used to produce
+				natural appearing textures on computer generated surfaces for motion picture
+				visual effects.
+				The development of Perlin Noise has allowed computer graphics artists to better
+				represent the complexity of natural phenomena in visual effects for the motion 
+				picture industry.
+				<br>
+				<br>
+				A Ken Perlin per aver sviluppato il Perlin Noise, una tecnica utilizzata per
+				produrre texture naturali su superfici generate da un computer per realizzare
+				effetti speciali tramite il motion picture.
+				Lo sviluppo del Perlin Noise ha permesso ai computer grafici di rappresentare
+				meglio i fenomeni naturali tramite effetti speciali nell'industria motion picture.
+				<br>
+				<br>
+				<b><span class="first-letter">V</span>ari utilizzi</b>
+				<br>
+				Il Perlin Noise è una texture procedurale primitiva, un tipo di gradient
+				noise (Rumore Graduale) usato dagli artisti di computer grafica al fine di 
+				aumentare la realisticità delle immagini. La funzione ha un aspetto quasi random,
+				nonostante ciò tutti i suoi dettagli sono della stessa dimensione.
+				Questa proprietà gli permette di essere facilmente controllabile; la ripetizione
+				di diverse compie di uno stesso dettaglio può essere inserita dentro espressioni
+				matematice al fine di ottenere diverse texture procedurali.
+				Questa tecnica è soprattutto utilizzata per generare texures quando la memoria è 
+				estremamente limitata, ad esempio nelle demos. Sta inoltre trovando spazio nella
+				renderizzazione in tempo reale e nei videogames.
+				<br>
+				<br>
+				<iframe width="100%" style="border: 0" height="500" src="https://cables.gl/p/zfzmT6"></iframe>
+			</div>
+	</div>
+	</div>
+    <div class="obscure">
+    </div>
+    <img class="image_vision close_img" />
+    <div class="container">
+        <div class="toggle" call="night_mode" call-act="night_mode" params="">
+            <p>Nigth mode</p>
+        </div>
+    </div>
+
+    <script src="main_script.js" type="text/javascript"></script>
+</body>
+
+</html>
